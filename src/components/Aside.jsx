@@ -115,9 +115,9 @@ const Aside = () => {
    <div className="w-full flex sm:flex fixed md:hidden md:left-[-100%] items-center justify-center pt-2 pb-1 bottom-0 bg-white z-50">
      {routes.map((route)=>(
       <NavLink to={route.url} key={route.id} 
-      className={`flex flex-col items-center gap-2 justify-center w-full font-medium ${location.pathname===route.url && "lg:bg-[#CDD0D5] font-semibold md:rounded-md"}`}>
-      <i className='text-2xl text-primary'>{route.icon}</i>
-      <h1 className='capitalize text-xs text-medium text-secondary'>{route.name}</h1>
+      className={`flex flex-col items-center gap-2 justify-center w-full font-medium`}>
+      <i className={`text-2xl text-gray-500 ${location.pathname===route.url && "text-primary font-semibold"}`}>{route.icon}</i>
+      <h1 className={`capitalize text-xs text-medium text-gray-500 ${location.pathname===route.url && "text-primary font-semibold"}`}>{route.name}</h1>
       </NavLink>
      ))}  
      </div>
